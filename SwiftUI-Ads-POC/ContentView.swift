@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var adManager = InterstitialAdManager()
+    @State private var showAd = false
+    
     var body: some View {
         VStack {
             Text("Your App Content")
                 .padding()
             
-            Spacer()
-            
-            BannerAdView()
-                .frame(height: 50)
+            Button("Show Interstitial Ad") {
+                showAd = true
+            }
+            .padding()
+        }
+        .sheet(isPresented: $showAd) {
+            InterstitialAdView(adManager: adManager)
         }
     }
 }

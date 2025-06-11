@@ -10,7 +10,7 @@ This project demonstrates the integration of Google Mobile Ads in a SwiftUI appl
 
 2. **Ad Unit IDs**
    - Current implementation uses test ad unit IDs
-   - Banner Ad Test ID: `ca-app-pub-3940256099942544/2934735716`
+   - Interstitial Ad Test ID: `ca-app-pub-3940256099942544/4411468910`
    - App ID: `ca-app-pub-3940256099942544~1458002511`
 
 3. **Production Setup**
@@ -20,9 +20,9 @@ This project demonstrates the integration of Google Mobile Ads in a SwiftUI appl
 
 ## Implementation Details
 
-- Banner ads are implemented using `BannerAdView`
+- Interstitial ads are implemented using `InterstitialAdView` and `InterstitialAdManager`
 - Ads are initialized in `SwiftUI_Ads_POCApp`
-- Banner ad is displayed at the bottom of the main content view
+- Interstitial ads are shown when the user taps the "Show Interstitial Ad" button
 
 ## Testing
 
