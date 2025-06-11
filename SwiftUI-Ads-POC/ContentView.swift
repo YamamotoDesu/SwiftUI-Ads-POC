@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var adManager = InterstitialAdManager()
-    @State private var showAd = false
     
     var body: some View {
         VStack {
@@ -17,12 +16,18 @@ struct ContentView: View {
                 .padding()
             
             Button("Show Interstitial Ad") {
-                showAd = true
+                if adManager.interstitial != nil {
+                    adManager.showAd(from: UIApplication.shared.windows.first?.rootViewController ?? UIViewController())
+                } else {
+                    adManager.loadInterstitial()
+                }
             }
             .padding()
-        }
-        .sheet(isPresented: $showAd) {
-            InterstitialAdView(adManager: adManager)
+            .disabled(adManager.isLoading)
+            
+            if adManager.isLoading {
+                ProgressView("Loading Ad...")
+            }
         }
     }
 }
