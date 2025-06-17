@@ -1,4 +1,4 @@
-# SwiftUI Ads POC
+# SwiftUI Banner Ads POC
 
 This project demonstrates the integration of Google Mobile Ads in a SwiftUI application.
 
