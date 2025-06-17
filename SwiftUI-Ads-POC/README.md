@@ -1,6 +1,26 @@
-# SwiftUI Banner Ads POC
+# SwiftUI Ads POC
 
 This project demonstrates the integration of Google Mobile Ads in a SwiftUI application.
+
+## Project Structure
+
+The project consists of the following main files:
+
+1. **SwiftUI_Ads_POCApp.swift**
+   - Main app entry point
+   - Initializes Google Mobile Ads SDK
+   - Sets up the main window and content view
+
+2. **ContentView.swift**
+   - Main view of the application
+   - Contains the app's primary content
+   - Integrates the banner ad at the bottom of the screen
+
+3. **BannerAdView.swift**
+   - Custom SwiftUI view for displaying banner ads
+   - Implements UIViewControllerRepresentable for Google Mobile Ads
+   - Handles banner ad initialization and display
+   - Uses test ad unit ID by default
 
 ## Setup Instructions
 
