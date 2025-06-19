@@ -1,37 +1,33 @@
-//
-//  ContentView.swift
-//  SwiftUI-Ads-POC
-//
-//  Created by Anirban Deb on 11/6/25.
-//
-
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject private var adManager = InterstitialAdManager()
-    
-    var body: some View {
-        VStack {
-            Text("Your App Content")
-                .padding()
-            
-            Button("Show Interstitial Ad") {
-                if adManager.interstitial != nil {
-                    adManager.showAd(from: UIApplication.shared.windows.first?.rootViewController ?? UIViewController())
-                } else {
-                    adManager.loadInterstitial()
-                }
-            }
-            .padding()
-            .disabled(adManager.isLoading)
-            
-            if adManager.isLoading {
-                ProgressView("Loading Ad...")
-            }
-        }
+extension UIApplication {
+    static var rootController: UIViewController? {
+        return UIApplication.shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }?
+            .rootViewController
     }
 }
 
-#Preview {
-    ContentView()
-}
+struct ContentView: View {
+    @StateObject private var adViewModel = InterstitialViewModel()
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Interstitial Ad Demo")
+                .font(.title)
+            Button("Show Interstitial Ad") {
+                if let root = UIApplication.rootController, adViewModel.adLoaded {
+                    adViewModel.showAd(from: root)
+                }
+            }
+            .disabled(!adViewModel.adLoaded)
+        }
+        .onAppear {
+            adViewModel.loadAd()
+        }
+        .padding()
+    }
+} 
