@@ -1,5 +1,5 @@
 //
-//  SwiftUI-Ads-POC
+//  SwiftUI_Ads_POCApp.swift
 //  SwiftUI-Ads-POC
 //
 //  Created by Anirban Deb on 11/6/25.
