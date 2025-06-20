@@ -1,6 +1,8 @@
-# SwiftUI Ads POC
+# SwiftUI Interstitial ads POC
 
 This project demonstrates the integration of Google Mobile Ads in a SwiftUI application.
+
+Interstitial ads are full-screen ads that cover the interface of an app until closed by the user. They're typically displayed at natural transition points in the flow of an app, such as between activities or during the pause between levels in a game. When an app shows an interstitial ad, the user has the choice to either tap on the ad and continue to its destination or close it and return to the app.
 
 ## Setup Instructions
 
@@ -53,6 +55,7 @@ This project was created as a minimal SwiftUI example for Google AdMob Interstit
 - **Info.plist**: The property list file for app configuration. It includes the AdMob App ID (GADApplicationIdentifier) and other required settings for the app to run and for AdMob to function.
 
 - **Assets.xcassets**: Contains image and color assets for the app, such as the app icon and accent color. Required for a complete Xcode project.
+
 
 ### How to open this project in Xcode 
 
