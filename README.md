@@ -2,9 +2,6 @@
 
 This project demonstrates the integration of Google Mobile Ads in a SwiftUI application.
 
-## Full Project GitHub Link
-
-For full content Please follow this branch: [https://github.com/YamamotoDesu/SwiftUI-Ads-POC/tree/banner-branch-swiftui-ads-v1](https://github.com/YamamotoDesu/SwiftUI-Ads-POC/tree/banner-branch-swiftui-ads-v1)
 
 ## Project Structure
 
