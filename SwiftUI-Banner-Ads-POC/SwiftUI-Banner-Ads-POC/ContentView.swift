@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwiftUI-Ads-POC
+//  SwiftUI-Banner-Ads-POC
 //
 //  Created by Anirban Deb on 11/6/25.
 //
